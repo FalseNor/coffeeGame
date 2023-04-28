@@ -4,16 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainGameFragment" >
+    tools:context=".MainGameFragment">
+
+    <!--TODO: add descriptions-->
 
     <ImageView
         android:id="@+id/character_image"
         android:layout_width="0dp"
-        android:layout_height="412dp"
-        android:scaleType="fitCenter"
-        android:src="@drawable/character_rumble_front"
+        android:layout_height="0dp"
+        android:contentDescription="TODO"
+        android:scaleType="centerCrop"
+        android:src="@drawable/character_rumble_storefront"
+        app:layout_constraintBottom_toTopOf="@id/guideline"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -21,44 +25,80 @@
         android:id="@+id/shopping_selection"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/text_box_bg"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/text_box_bg"
-        app:layout_constraintTop_toBottomOf="@+id/text_box_bg"
-        app:layout_constraintVertical_bias="0.0"
+        android:background="@color/purple_200"
+        android:orientation="horizontal"
         android:scrollbars="horizontal"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideline2"
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
         android:id="@+id/text_box_bg"
-        android:layout_width="0dp"
-        android:layout_height="175dp"
-        android:src="@drawable/text_box"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/character_image"
-        tools:ignore="ImageContrastCheck" />
-
-    <TextView
-        android:id="@+id/text_box"
-        style="@style/TitleTextView"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:text=":3"
-        app:autoSizeMaxTextSize="42dp"
-        app:autoSizeMinTextSize="12dp"
-        app:layout_constraintBottom_toTopOf="@+id/shopping_selection"
+        android:importantForAccessibility="no"
+        android:scaleType="centerCrop"
+        android:src="@drawable/better_text_box"
+        app:layout_constraintBottom_toTopOf="@id/guideline2"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline" />
+
+    <TextView
+        android:id="@+id/text_box"
+        style="@style/DescriptionTextView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="The strength of the tiger is really impressive (^=˃ᆺ˂)"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toBottomOf="@+id/text_box_bg"
+        app:layout_constraintEnd_toEndOf="@+id/text_box_bg"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/text_box_bg"
-        app:layout_constraintTop_toBottomOf="@+id/character_image"
-        app:layout_constraintVertical_bias="1.0"
-        tools:autoSizeTextType="uniform"
-        tools:ignore="TextContrastCheck" />
+        app:layout_constraintTop_toTopOf="@id/text_box_bg"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".70" />
+
+    <Button
+        android:id="@+id/chat_button"
+        style="@style/DescriptionTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/chat"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:backgroundTint="@color/salmon"/>
+
+    <Button
+        android:id="@+id/back_button"
+        style="@style/DescriptionTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/back"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintStart_toStartOf="parent"
+        android:backgroundTint="@color/salmon"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,8 +1,11 @@
 <resources>
-    <string name="app_name">CoffeeGame</string>
+    <string name="app_name">Internet Cafe</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="sustenance_name">sustenance name</string>
     <string name="sustenance_description">sustenance description</string>
     <string name="sustenance_price">sustenance price</string>
+    <string name="start">Start!</string>
+    <string name="chat">Chat</string>
+    <string name="back">Back</string>
 </resources>

@@ -18,5 +18,29 @@
         android:id="@+id/mainGameFragment"
         android:name="com.example.coffeegame.MainGameFragment"
         android:label="fragment_main_game"
-        tools:layout="@layout/fragment_main_game" />
+        tools:layout="@layout/fragment_main_game" >
+        <action
+            android:id="@+id/action_mainGameFragment_to_startFragment"
+            app:destination="@id/startFragment" />
+        <action
+            android:id="@+id/action_mainGameFragment_to_ambianceFragment"
+            app:destination="@id/ambianceFragment" />
+        <action
+            android:id="@+id/action_mainGameFragment_to_chatFragment"
+            app:destination="@id/chatFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ambianceFragment"
+        android:name="com.example.coffeegame.AmbianceFragment"
+        android:label="fragment_ambiance"
+        tools:layout="@layout/fragment_ambiance" >
+        <action
+            android:id="@+id/action_ambianceFragment_to_mainGameFragment"
+            app:destination="@id/mainGameFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/chatFragment"
+        android:name="com.example.coffeegame.ChatFragment"
+        android:label="fragment_chat"
+        tools:layout="@layout/fragment_chat" />
 </navigation>
