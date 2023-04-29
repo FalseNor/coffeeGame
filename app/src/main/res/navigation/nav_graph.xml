@@ -23,11 +23,11 @@
             android:id="@+id/action_mainGameFragment_to_startFragment"
             app:destination="@id/startFragment" />
         <action
-            android:id="@+id/action_mainGameFragment_to_ambianceFragment"
-            app:destination="@id/ambianceFragment" />
-        <action
             android:id="@+id/action_mainGameFragment_to_chatFragment"
             app:destination="@id/chatFragment" />
+        <action
+            android:id="@+id/action_mainGameFragment_to_purchaseFragment"
+            app:destination="@id/purchaseFragment" />
     </fragment>
     <fragment
         android:id="@+id/ambianceFragment"
@@ -37,10 +37,26 @@
         <action
             android:id="@+id/action_ambianceFragment_to_mainGameFragment"
             app:destination="@id/mainGameFragment" />
+        <action
+            android:id="@+id/action_ambianceFragment_to_startFragment"
+            app:destination="@id/startFragment" />
     </fragment>
     <fragment
         android:id="@+id/chatFragment"
         android:name="com.example.coffeegame.ChatFragment"
         android:label="fragment_chat"
-        tools:layout="@layout/fragment_chat" />
+        tools:layout="@layout/fragment_chat" >
+        <action
+            android:id="@+id/action_chatFragment_to_startFragment"
+            app:destination="@id/startFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/purchaseFragment"
+        android:name="com.example.coffeegame.PurchaseFragment"
+        android:label="fragment_purchase"
+        tools:layout="@layout/fragment_purchase" >
+        <action
+            android:id="@+id/action_purchaseFragment_to_ambianceFragment"
+            app:destination="@id/ambianceFragment" />
+    </fragment>
 </navigation>

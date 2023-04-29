@@ -1,26 +1,44 @@
 package com.example.coffeegame.data
 
+import android.os.Build
+import androidx.annotation.RequiresApi
 import com.example.coffeegame.R
+import com.example.coffeegame.model.Barista
 import com.example.coffeegame.model.Sustenance
+import java.util.Calendar
+import java.util.TimeZone
 
 object Datasource {
+
+    //data handling functions
     fun getSustenanceData(): ArrayList<Sustenance>{
         return sustenanceList
     }
+    fun getBaristaData(): ArrayList<Barista>{
+        return baristaList
+    }
+    @RequiresApi(Build.VERSION_CODES.N)
+    fun getLocalTime(): Long
+    {
+        val currentDate = Calendar.getInstance()
+        return currentDate.timeInMillis + TimeZone.getDefault().getOffset(currentDate.timeInMillis)
+    }
+
+    //declared lists here
 
     private val sustenanceList: ArrayList<Sustenance> = arrayListOf(
         Sustenance(
             1,
             R.drawable.food_hotdog,
             "HotDogDog",
-            "1.0005 dollaroonies",
+            "1.0005 dollaroos",
             "The dog sees your sin.. how could you eat her"
         ),
         Sustenance(
             2,
             R.drawable.food_hotdog,
             "Overpriced Panini",
-            "300√2 digeridollars",
+            "300√2 dinglebucks",
         "A sandwich that costs a hopefully nonliteral arm and a leg"
         ),
         Sustenance(
@@ -86,5 +104,37 @@ object Datasource {
             "10 doler",
             "Did you mean to order a whole pitcher?"
         )
+    )
+    private val baristaList: ArrayList<Barista> = arrayListOf(
+            Barista(
+                1,
+                "Rumble",
+                R.drawable.character_rumble_storefront,
+                "Tiger Facts",
+                //rumble advice list
+                arrayListOf(
+                    "When the going gets tough, play dead!",
+                    "Don't forget that your health is priority #1. It's harder to do things if you don't take care of yourself",
+                    "It's not a waste of time if you enjoyed wasting it"
+                ),
+                //rumble chat list
+                arrayListOf(
+                    "The weather around here is so peculiar, how is it where you are?",
+                    "The weirdest thing happened earlier.. I went outside and the floor suddenly stopped existing."
+                ),
+                //rumble flirt response list
+                arrayListOf(
+                    "I'm sorry I don't think I understand what you mean by that",
+                    "Thank you! I find my stripes quite fetching as well"
+                ),
+                //rumble custom advice list.. tiger facts!
+                arrayListOf(
+                    "Tigers are the most beautiful cats (^･ｪ･^)",
+                    "The strength of the tiger is really impressive (^=˃ᆺ˂)",
+                    "Fossil remains of tigers found in parts of China are believed to be 2 million years old! (,,^・⋏・^,,)",
+                    "(^=˃ᆺ˂) No two tigers have the same stripes!",
+                    "Tigers are the largest of all the Asian big cats ≽ܫ≼"
+                )
+            )
     )
 }

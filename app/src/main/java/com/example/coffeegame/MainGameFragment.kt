@@ -25,13 +25,18 @@ class MainGameFragment : Fragment() {
 
         val adapter = SustenanceAdapter {
             sustenanceViewModel.updateCurrentSustenance(it)
-            view.findNavController().navigate(R.id.ambianceFragment)
+            view.findNavController().navigate(R.id.purchaseFragment)
             //'it' is whatever current item you clicked
         }
         binding.shoppingSelection.adapter = adapter
         adapter.submitList(sustenanceViewModel.sustenanceData)
+
+        //nav buttons
         binding.chatButton.setOnClickListener{
             view.findNavController().navigate(R.id.chatFragment)
+        }
+        binding.backButton.setOnClickListener{
+            view.findNavController().navigate(R.id.startFragment)
         }
     }
 }

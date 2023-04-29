@@ -20,11 +20,3 @@ class MainActivity : AppCompatActivity() {
         navController = navHostFragment.navController
     }
 }
-/*
-@RequiresApi(Build.VERSION_CODES.N)
-fun getLocalTime(): Long
-{
-    val currentDate = Calendar.getInstance()
-    return currentDate.timeInMillis + TimeZone.getDefault().getOffset(currentDate.timeInMillis)
-}
-*/
