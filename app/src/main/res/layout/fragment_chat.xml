@@ -43,7 +43,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:scaleType="centerCrop"
-        android:src="@drawable/character_rumble_storefront"
+        android:src="@drawable/counter"
         app:layout_constraintBottom_toBottomOf="@id/guideline3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -68,6 +68,7 @@
         style="@style/DescriptionTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:backgroundTint="@color/salmon"
         android:text="@string/back"
         app:layout_constraintBottom_toTopOf="@id/guideline3"
         app:layout_constraintStart_toStartOf="parent" />
@@ -120,7 +121,7 @@
             android:layout_rowWeight="1"
             android:layout_column="0"
             android:layout_columnWeight="1"
-            android:backgroundTint="@color/variant_purple"
+            android:backgroundTint="@color/purple_500"
             android:text="Flirt"
             android:textStyle="bold" />
 

@@ -32,77 +32,88 @@ object Datasource {
             R.drawable.food_hotdog,
             "HotDogDog",
             "1.0005 dollaroos",
-            "The dog sees your sin.. how could you eat her"
+            "The dog sees your sin.. how could you eat her",
+            "Death is inevitable.. you have simply hastened my end."
         ),
         Sustenance(
             2,
             R.drawable.food_hotdog,
             "Overpriced Panini",
-            "300√2 dinglebucks",
-        "A sandwich that costs a hopefully nonliteral arm and a leg"
+            "30√2 fake dollar",
+        "A sandwich that costs a hopefully nonliteral arm and a leg",
+            "Death is merely a change in form! End, I welcome thee."
         ),
         Sustenance(
             3,
             R.drawable.food_to_go_coffee,
             "normal coffee",
             ".3 cents",
-        "No additions, a classic choice."
+        "No additions, a classic choice.",
+            "I'm going to 4D, baby!"
         ),
         Sustenance(
             4,
             R.drawable.food_hotdog,
             "Hot or Not Tea",
             "3.35$",
-            "A lovely option for a dull morning or a scenic night"
+            "A lovely option for a dull morning or a scenic night",
+            "I hope I taste alright. It's not like I know, I can't taste myself."
         ),
         Sustenance(
             5,
             R.drawable.food_fidget_burger,
             "Burger",
             "7 million",
-            "Yeah it's edible no problem"
+            "Yeah it's edible no problem",
+            "I hope you get indigestion."
         ),
         Sustenance(
             6,
             R.drawable.food_spider_donut,
             "Spider Donut",
             "2.00$",
-            "Lovely spider donut"
+            "Lovely spider donut",
+            "You and I are one taste from absolution."
         ),
         Sustenance(
             7,
             R.drawable.food_coffee_cream,
             "Cream Cold Brew",
             "3.00$",
-            "Cold brew with creme"
+            "Cold brew with creme",
+            "Ok now we switch I eat you now."
         ),
         Sustenance(
             8,
             R.drawable.food_frosty,
-            "Frosty",
+            "Malkshake",
             "300$",
-            "It fell off the back of a truck ..you can have it if you want"
+            "It fell off the back of a truck ..you can have it if you want",
+            "You've wasted my soul on a meal."
         ),
         Sustenance(
             9,
             R.drawable.food_iced_drink,
             "Iced Tea",
             "2$",
-            "We put the tea... on ice"
+            "We put the tea... on ice",
+            "I am happy to fall to such a foe as yourself. "
         ),
         Sustenance(
             10,
             R.drawable.food_pink_lemonade,
             "Pink Lemonade",
             ".667 dogglers",
-            "Pink lemonade to share with your bestest friends :)"
+            "Pink lemonade to share with your bestest friends :)",
+            "Eat me and we shall be one."
         ),
         Sustenance(
             11,
             R.drawable.food_pitcher,
             "Entire Pitcher of Cold Brew Coffee",
             "10 doler",
-            "Did you mean to order a whole pitcher?"
+            "Did you mean to order a whole pitcher?",
+            "Please tell me you're at least sharing me and not chugging an entire pitcher."
         )
     )
     private val baristaList: ArrayList<Barista> = arrayListOf(

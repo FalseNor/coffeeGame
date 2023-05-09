@@ -7,5 +7,6 @@ data class Sustenance (
     @DrawableRes val imageResourceId: Int,
     val name: String,
     val price: String,
-    val description: String
+    val description: String,
+    val deathStatement: String
     )

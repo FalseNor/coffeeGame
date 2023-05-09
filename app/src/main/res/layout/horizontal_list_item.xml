@@ -34,6 +34,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8sp"
                 android:text="@string/sustenance_name"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/sustenance_image" />
@@ -44,6 +45,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="@string/sustenance_price"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 app:layout_constraintEnd_toEndOf="@+id/sustenance_name"
                 app:layout_constraintStart_toStartOf="@+id/sustenance_name"
                 app:layout_constraintTop_toBottomOf="@+id/sustenance_name" />
