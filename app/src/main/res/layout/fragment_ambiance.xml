@@ -7,11 +7,11 @@
     tools:context=".AmbianceFragment">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/image_ambiance_background"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:scaleType="centerCrop"
-        android:src="@drawable/seat1"
+        android:src="@drawable/ambiance_background"
         app:layout_constraintBottom_toBottomOf="@id/guideline3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -25,7 +25,7 @@
         app:layout_constraintGuide_percent=".75" />
 
     <ImageView
-        android:id="@+id/text_box_bg2"
+        android:id="@+id/text_box_bg_ambiance"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="8dp"
@@ -34,11 +34,11 @@
         android:layout_marginBottom="8dp"
         android:importantForAccessibility="no"
         android:scaleType="centerCrop"
-        android:src="@drawable/text_box"
+        android:src="@drawable/better_text_box"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/image_ambiance_background" />
 
     <TextView
         android:id="@+id/textView"
@@ -49,9 +49,18 @@
         android:layout_marginEnd="8dp"
         android:text="TextView tet tetet etetet"
         app:autoSizeTextType="uniform"
-        app:layout_constraintBottom_toBottomOf="@id/text_box_bg2"
-        app:layout_constraintEnd_toEndOf="@id/text_box_bg2"
-        app:layout_constraintStart_toStartOf="@id/text_box_bg2"
-        app:layout_constraintTop_toTopOf="@id/text_box_bg2" />
+        app:layout_constraintBottom_toBottomOf="@id/text_box_bg_ambiance"
+        app:layout_constraintEnd_toEndOf="@id/text_box_bg_ambiance"
+        app:layout_constraintStart_toStartOf="@id/text_box_bg_ambiance"
+        app:layout_constraintTop_toTopOf="@id/text_box_bg_ambiance" />
+
+    <ImageView
+        android:id="@+id/image_ambiance_foreground"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ambiance_foreground"
+        app:layout_constraintBottom_toBottomOf="@+id/image_ambiance_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

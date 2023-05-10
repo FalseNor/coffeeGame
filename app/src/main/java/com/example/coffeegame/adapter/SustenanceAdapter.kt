@@ -21,7 +21,7 @@ class SustenanceAdapter(private val onItemClicked: (Sustenance) -> Unit) :
         fun bind(sustenance: Sustenance, context: Context) { //context.getString(sustenance.name) but we're not using string resources yet
             binding.sustenanceName.text = sustenance.name
             binding.sustenancePrice.text = sustenance.price
-            // Load the images into the ImageView using the Coil library.
+            // Load the images into the ImageView using the Coil library
             binding.sustenanceImage.load(sustenance.imageResourceId)
         }
     }
