@@ -9,46 +9,49 @@
     app:cardCornerRadius="8sp"
     app:cardElevation="4sp">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="100sp"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="120sp"
+        android:layout_height="wrap_content"
+        android:paddingStart="8sp"
+        android:paddingTop="8sp"
+        android:paddingEnd="8sp"
+        android:paddingBottom="8sp">
+
+        <ImageView
+            android:id="@+id/sustenance_image"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:paddingStart="8sp"
-            android:paddingTop="8sp"
-            android:paddingEnd="8sp"
-            android:paddingBottom="8sp">
+            android:layout_marginTop="8dp"
+            android:importantForAccessibility="no"
+            android:src="@drawable/food_hotdog"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-            <ImageView
-                android:id="@+id/sustenance_image"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:importantForAccessibility="no"
-                android:src="@drawable/food_hotdog"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/sustenance_name"
+            style="@style/DescriptionTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8sp"
+            android:text="@string/sustenance_name"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            app:autoSizeTextType="uniform"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sustenance_image" />
 
-            <TextView
-                android:id="@+id/sustenance_name"
-                style="@style/DescriptionTextView"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8sp"
-                android:text="@string/sustenance_name"
-                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/sustenance_image" />
+        <TextView
+            android:id="@+id/sustenance_price"
+            style="@style/SmallerDescriptionTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/sustenance_price"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            app:autoSizeTextType="uniform"
+            app:layout_constraintEnd_toEndOf="@+id/sustenance_name"
+            app:layout_constraintStart_toStartOf="@+id/sustenance_name"
+            app:layout_constraintTop_toBottomOf="@+id/sustenance_name" />
 
-            <TextView
-                android:id="@+id/sustenance_price"
-                style="@style/SmallerDescriptionTextView"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="@string/sustenance_price"
-                android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                app:layout_constraintEnd_toEndOf="@+id/sustenance_name"
-                app:layout_constraintStart_toStartOf="@+id/sustenance_name"
-                app:layout_constraintTop_toBottomOf="@+id/sustenance_name" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </com.google.android.material.card.MaterialCardView>

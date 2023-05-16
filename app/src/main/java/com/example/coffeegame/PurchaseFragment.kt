@@ -48,7 +48,6 @@ class PurchaseFragment : Fragment() {
             binding.itemTitleTextView.text = it.name
             binding.itemPriceTextView.text = it.price
             binding.itemDescriptionTextView.text = it.description
-            binding.foodNameDialogueTextView.text = it.name
             //TODO: use getString(it.deathStatement) when strings are saved properly
             }
         //navigation buttons

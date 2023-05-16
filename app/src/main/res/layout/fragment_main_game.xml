@@ -114,6 +114,7 @@
         android:background="@color/black"
         android:padding="8dp"
         android:text="Rumble"
+        app:autoSizeTextType="uniform"
         app:layout_constraintBottom_toTopOf="@+id/guideline"
         app:layout_constraintEnd_toStartOf="@+id/chat_button"
         app:layout_constraintHorizontal_bias="0.0"

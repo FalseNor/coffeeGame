@@ -19,7 +19,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent=".70" />
+        app:layout_constraintGuide_percent=".65" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vertical_fourth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".3" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/bottom_horizontal_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".85" />
 
     <ImageView
         android:id="@+id/purchase_screen_character_image"
@@ -34,14 +48,15 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
+
     <ImageView
         android:id="@+id/purchase_screen_text_box_bg"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="4dp"
         android:importantForAccessibility="no"
         android:scaleType="centerCrop"
         android:src="@drawable/better_text_box"
@@ -50,16 +65,15 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/purchase_fragment_under_half_guideline"
-        app:layout_constraintVertical_bias="0.0" />
-
+        app:layout_constraintVertical_bias="1.0" />
 
     <ImageView
         android:id="@+id/other_text_box_bg"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="4dp"
         android:scaleType="centerCrop"
         android:src="@drawable/better_text_box"
         app:layout_constraintBottom_toTopOf="@+id/purchase_fragment_under_half_guideline"
@@ -74,40 +88,41 @@
         android:id="@+id/item_title_text_view"
         style="@style/DescriptionTextView"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="4dp"
         android:layout_marginEnd="8dp"
         android:text="HotDog Dog"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toTopOf="@+id/item_description_text_view"
         app:layout_constraintEnd_toEndOf="@+id/purchase_screen_text_box_bg"
         app:layout_constraintStart_toStartOf="@+id/purchase_screen_text_box_bg"
         app:layout_constraintTop_toTopOf="@+id/purchase_screen_text_box_bg" />
 
     <TextView
         android:id="@+id/item_description_text_view"
-        style="@style/SmallerDescriptionTextView"
+        style="@style/DescriptionTextView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
         android:text="The dog sees your sin.. how could you eat her"
-        app:layout_constraintEnd_toEndOf="@+id/purchase_screen_text_box_bg"
-        app:layout_constraintStart_toStartOf="@+id/purchase_screen_text_box_bg"
-        app:layout_constraintTop_toBottomOf="@+id/item_title_text_view" />
+        app:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toTopOf="@+id/item_price_text_view"
+        app:layout_constraintEnd_toEndOf="@+id/item_title_text_view"
+        app:layout_constraintStart_toStartOf="@+id/item_title_text_view" />
 
     <TextView
         android:id="@+id/item_price_text_view"
-        style="@style/SmallerDescriptionTextView"
+        style="@style/DescriptionTextView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
         android:text="amount of money"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_horizontal_guideline"
         app:layout_constraintEnd_toEndOf="@+id/purchase_screen_text_box_bg"
-        app:layout_constraintStart_toStartOf="@+id/purchase_screen_text_box_bg"
-        app:layout_constraintTop_toBottomOf="@+id/item_description_text_view" />
+        app:layout_constraintStart_toStartOf="@+id/purchase_screen_text_box_bg" />
 
     <Button
         android:id="@+id/eat_button"
@@ -116,11 +131,11 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
         android:backgroundTint="@color/salmon"
-        android:text="Eat"
+        android:text="@string/eat"
         app:layout_constraintBottom_toBottomOf="@+id/purchase_screen_text_box_bg"
         app:layout_constraintEnd_toEndOf="@+id/purchase_screen_text_box_bg"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="@+id/purchase_screen_text_box_bg" />
 
     <com.google.android.material.textfield.TextInputEditText
@@ -130,7 +145,6 @@
         android:layout_height="wrap_content"
         android:layout_rowWeight="1"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:hint="Name for the order:"
         android:inputType="textCapWords"
@@ -139,7 +153,7 @@
         app:layout_constraintBottom_toTopOf="@+id/eat_button"
         app:layout_constraintEnd_toEndOf="@+id/purchase_screen_text_box_bg"
         app:layout_constraintStart_toStartOf="@+id/purchase_screen_text_box_bg"
-        app:layout_constraintTop_toBottomOf="@+id/item_price_text_view" />
+        app:layout_constraintTop_toTopOf="@+id/bottom_horizontal_guideline" />
 
     <Button
         android:id="@+id/purchase_screen_back_to_start_button"
@@ -156,44 +170,33 @@
         style="@style/DescriptionTextView"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_rowWeight="1"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="8dp"
+        android:layout_margin="8dp"
         android:background="@color/black"
+        android:gravity="top|center_vertical"
+        android:padding="8dp"
         android:text="&quot;goodbye, cruel world!&quot;"
-        app:layout_constraintBottom_toTopOf="@+id/purchase_fragment_under_half_guideline"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/food_image"
-        app:layout_constraintTop_toBottomOf="@+id/food_name_dialogue_text_view" />
+        app:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toBottomOf="@id/other_text_box_bg"
+        app:layout_constraintEnd_toEndOf="@id/other_text_box_bg"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/vertical_fourth"
+        app:layout_constraintTop_toTopOf="@+id/other_text_box_bg"
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
         android:id="@+id/food_image"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_rowWeight="1"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
         android:src="@drawable/food_hotdog"
         app:layout_constraintBottom_toBottomOf="@+id/other_text_box_bg"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/other_text_box_bg" />
-
-    <TextView
-        android:id="@+id/food_name_dialogue_text_view"
-        style="@style/DescriptionTextView"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:background="@color/black"
-        android:paddingTop="8dp"
-        android:paddingBottom="8dp"
-        android:text="HotDog Dog"
-        app:layout_constraintEnd_toEndOf="@+id/other_text_box_bg"
-        app:layout_constraintStart_toEndOf="@+id/food_image"
-        app:layout_constraintTop_toTopOf="@+id/other_text_box_bg" />
+        app:layout_constraintEnd_toStartOf="@+id/vertical_fourth"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/other_text_box_bg"
+        app:layout_constraintTop_toTopOf="@+id/other_text_box_bg"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/back_button_purchase_screen"
@@ -215,6 +218,7 @@
         android:background="@color/black"
         android:padding="8dp"
         android:text="Rumble"
+        app:autoSizeTextType="uniform"
         app:layout_constraintBottom_toTopOf="@+id/purchase_fragment_half_guideline"
         app:layout_constraintEnd_toStartOf="@+id/back_button_purchase_screen"
         app:layout_constraintHorizontal_bias="0.353"
