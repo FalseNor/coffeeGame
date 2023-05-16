@@ -6,6 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
+import androidx.navigation.fragment.findNavController
+import coil.load
 import com.example.coffeegame.databinding.FragmentAmbianceBinding
 
 class AmbianceFragment : Fragment() {
@@ -22,7 +24,13 @@ class AmbianceFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         val binding = FragmentAmbianceBinding.bind(view)
         sustenanceViewModel.currentSustenance.observe(this.viewLifecycleOwner){
-
+            binding.foodImageAmbianceScreen.load(it.imageResourceId)
+        }
+        binding.ambianceBackToStartButton.setOnClickListener {
+            findNavController().navigate(R.id.startFragment)
+        }
+        binding.ambianceBackToMain.setOnClickListener{
+            findNavController().navigate(R.id.mainGameFragment)
         }
     }
 }

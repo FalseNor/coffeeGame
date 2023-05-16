@@ -12,13 +12,13 @@
         android:layout_height="0dp"
         android:scaleType="centerCrop"
         android:src="@drawable/ambiance_background"
-        app:layout_constraintBottom_toBottomOf="@id/guideline3"
+        app:layout_constraintBottom_toBottomOf="@id/ambiance_guideline"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline3"
+        android:id="@+id/ambiance_guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -47,8 +47,7 @@
         android:layout_height="0dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:text="TextView tet tetet etetet"
-        app:autoSizeTextType="uniform"
+        android:text="Placeholder words"
         app:layout_constraintBottom_toBottomOf="@id/text_box_bg_ambiance"
         app:layout_constraintEnd_toEndOf="@id/text_box_bg_ambiance"
         app:layout_constraintStart_toStartOf="@id/text_box_bg_ambiance"
@@ -62,5 +61,38 @@
         app:layout_constraintBottom_toBottomOf="@+id/image_ambiance_background"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/food_image_ambiance_screen"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="32dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/food_hotdog"
+        app:layout_constraintBottom_toBottomOf="@+id/image_ambiance_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/ambiance_back_to_start_button"
+        style="@style/DescriptionTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/salmon"
+        android:text="@string/home"
+        app:layout_constraintBottom_toTopOf="@+id/ambiance_guideline"
+        app:layout_constraintStart_toStartOf="@+id/image_ambiance_background" />
+
+    <Button
+        android:id="@+id/ambiance_back_to_main"
+        style="@style/DescriptionTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/salmon"
+        android:text="@string/back"
+        app:layout_constraintBottom_toTopOf="@+id/ambiance_guideline"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

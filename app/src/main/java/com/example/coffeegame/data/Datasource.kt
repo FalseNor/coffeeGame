@@ -17,6 +17,9 @@ object Datasource {
     fun getBaristaData(): ArrayList<Barista>{
         return baristaList
     }
+    fun getCurrentBarista(): Barista{
+        return baristaList[1]
+    }
     @RequiresApi(Build.VERSION_CODES.N)
     fun getLocalTime(): Long
     {
@@ -117,11 +120,39 @@ object Datasource {
         )
     )
     private val baristaList: ArrayList<Barista> = arrayListOf(
-            Barista(
+        Barista(
+            0,
+            "Pyotr",
+            R.drawable.character_pyotr_storefront,
+            "Lie to Me",
+            "",
+            //pyotr advice list
+            arrayListOf(
+                "The value of g on Earth is about 9.8 meters per second per second",
+                ""
+            ),
+            //pyotr chat list
+            arrayListOf(
+                "I was once a civil engineer, until I earned enough to follow my passion -now huzzah!",
+                ""
+            ),
+            //pyotr flirt response list
+            arrayListOf(
+                "I like to keep my armor well polished! Thank you for noticing, zaika",
+                "What did you mean by this?"
+            ),
+            //pyotr custom response list.. list of lies
+            arrayListOf(
+                "2+2=4 :)",
+                ""
+            )
+        ),
+        Barista(
                 1,
                 "Rumble",
                 R.drawable.character_rumble_storefront,
                 "Tiger Facts",
+                "Hello! Welcome to the Internet Cafe. How may we serve you today?",
                 //rumble advice list
                 arrayListOf(
                     "When the going gets tough, play dead!",

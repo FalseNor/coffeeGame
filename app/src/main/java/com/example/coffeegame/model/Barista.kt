@@ -8,7 +8,7 @@ data class Barista(
     @DrawableRes val imageResourceId: Int,
     //name of custom chat in chat fragment
     val customChatName: String,
-
+    val normalGreetingStatement: String,
 
     //used in chat fragment
     val adviceList: ArrayList<String>,

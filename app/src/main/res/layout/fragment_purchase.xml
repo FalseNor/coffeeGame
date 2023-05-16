@@ -52,61 +52,23 @@
         app:layout_constraintTop_toTopOf="@+id/purchase_fragment_under_half_guideline"
         app:layout_constraintVertical_bias="0.0" />
 
+
     <ImageView
         android:id="@+id/other_text_box_bg"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:scaleType="centerCrop"
-        android:src="@drawable/better_text_box"
-        app:layout_constraintBottom_toBottomOf="@+id/food_death_statement_holder"
-        app:layout_constraintEnd_toEndOf="@+id/food_death_statement_holder"
-        app:layout_constraintStart_toStartOf="@+id/food_death_statement_holder"
-        app:layout_constraintTop_toTopOf="@+id/food_death_statement_holder"
-        app:tint="@color/teal_700" />
-
-    <GridLayout
-        android:id="@+id/food_death_statement_holder"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toTopOf="@id/purchase_fragment_under_half_guideline"
+        android:scaleType="centerCrop"
+        android:src="@drawable/better_text_box"
+        app:layout_constraintBottom_toTopOf="@+id/purchase_fragment_under_half_guideline"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-
-        app:layout_constraintTop_toBottomOf="@id/purchase_fragment_half_guideline"
-        tools:backgroundTint="@color/black">
-
-        <ImageView
-            android:id="@+id/food_image"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_row="0"
-            android:layout_rowWeight="1"
-            android:layout_column="0"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"
-            android:src="@drawable/food_hotdog" />
-
-        <TextView
-            android:id="@+id/death_statement_text"
-            style="@style/DescriptionTextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_row="0"
-            android:layout_rowWeight="1"
-            android:layout_column="1"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"
-            android:text="goodbye, cruel world!" />
-
-    </GridLayout>
-
-
+        app:layout_constraintTop_toTopOf="@+id/purchase_fragment_half_guideline"
+        app:layout_constraintVertical_bias="0.0"
+        app:tint="@color/teal_700" />
 
     <TextView
         android:id="@+id/item_title_text_view"
@@ -152,29 +114,86 @@
         style="@style/DescriptionTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
         android:backgroundTint="@color/salmon"
         android:text="Eat"
         app:layout_constraintBottom_toBottomOf="@+id/purchase_screen_text_box_bg"
         app:layout_constraintEnd_toEndOf="@+id/purchase_screen_text_box_bg"
-        app:layout_constraintStart_toStartOf="@+id/purchase_screen_text_box_bg"
-        app:layout_constraintTop_toBottomOf="@+id/order_name_input" />
+        app:layout_constraintStart_toStartOf="@+id/purchase_screen_text_box_bg" />
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/order_name_input"
         style="@style/DescriptionTextView"
-        android:layout_width="0dp"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_rowWeight="1"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
+        android:hint="Name for the order:"
         android:inputType="textCapWords"
-        android:maxWidth="300dp"
         android:minHeight="48dp"
-        android:text="Name for the order: "
+        android:textColorHint="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/eat_button"
         app:layout_constraintEnd_toEndOf="@+id/purchase_screen_text_box_bg"
         app:layout_constraintStart_toStartOf="@+id/purchase_screen_text_box_bg"
         app:layout_constraintTop_toBottomOf="@+id/item_price_text_view" />
+
+    <Button
+        android:id="@+id/purchase_screen_back_to_start_button"
+        style="@style/DescriptionTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/salmon"
+        android:text="@string/home"
+        app:layout_constraintBottom_toTopOf="@+id/purchase_fragment_half_guideline"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/death_statement_text"
+        style="@style/DescriptionTextView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_rowWeight="1"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/black"
+        android:text="&quot;goodbye, cruel world!&quot;"
+        app:layout_constraintBottom_toTopOf="@+id/purchase_fragment_under_half_guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/food_image"
+        app:layout_constraintTop_toBottomOf="@+id/food_name_dialogue_text_view" />
+
+    <ImageView
+        android:id="@+id/food_image"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_rowWeight="1"
+        android:layout_marginStart="16dp"
+        android:src="@drawable/food_hotdog"
+        app:layout_constraintBottom_toBottomOf="@+id/other_text_box_bg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/other_text_box_bg" />
+
+    <TextView
+        android:id="@+id/food_name_dialogue_text_view"
+        style="@style/DescriptionTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@color/black"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:text="HotDog Dog"
+        app:layout_constraintEnd_toEndOf="@+id/other_text_box_bg"
+        app:layout_constraintStart_toEndOf="@+id/food_image"
+        app:layout_constraintTop_toTopOf="@+id/other_text_box_bg" />
 
     <Button
         android:id="@+id/back_button_purchase_screen"
@@ -184,6 +203,22 @@
         android:backgroundTint="@color/salmon"
         android:text="@string/back"
         app:layout_constraintBottom_toTopOf="@+id/purchase_fragment_half_guideline"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/barista_name_view"
+        style="@style/DescriptionTextView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@color/black"
+        android:padding="8dp"
+        android:text="Rumble"
+        app:layout_constraintBottom_toTopOf="@+id/purchase_fragment_half_guideline"
+        app:layout_constraintEnd_toStartOf="@+id/back_button_purchase_screen"
+        app:layout_constraintHorizontal_bias="0.353"
+        app:layout_constraintStart_toEndOf="@+id/purchase_screen_back_to_start_button"
+        app:layout_constraintTop_toTopOf="@+id/purchase_screen_back_to_start_button" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

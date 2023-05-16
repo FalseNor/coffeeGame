@@ -57,9 +57,8 @@
         style="@style/DescriptionTextView"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:text="The strength of the tiger is really impressive (^=˃ᆺ˂)"
+        android:padding="8dp"
+        android:text="Hello! Welcome to the Internet Cafe. How may we serve you today?"
         app:autoSizeTextType="uniform"
         app:layout_constraintBottom_toBottomOf="@+id/text_box_bg"
         app:layout_constraintEnd_toEndOf="@+id/text_box_bg"
@@ -100,8 +99,24 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/salmon"
-        android:text="@string/back"
+        android:text="@string/home"
         app:layout_constraintBottom_toTopOf="@+id/guideline"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/name_display"
+        style="@style/DescriptionTextView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@color/black"
+        android:padding="8dp"
+        android:text="Rumble"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintEnd_toStartOf="@+id/chat_button"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/back_button"
+        app:layout_constraintTop_toTopOf="@+id/back_button" />
 </androidx.constraintlayout.widget.ConstraintLayout>
