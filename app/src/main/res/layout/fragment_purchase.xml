@@ -82,7 +82,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/purchase_fragment_half_guideline"
         app:layout_constraintVertical_bias="0.0"
-        app:tint="@color/teal_700" />
+        app:tint="@color/teal_700"
+        android:importantForAccessibility="no" />
 
     <TextView
         android:id="@+id/item_title_text_view"
@@ -92,7 +93,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="4dp"
         android:layout_marginEnd="8dp"
-        android:text="HotDog Dog"
+        android:text="@string/item_name_default"
         app:autoSizeTextType="uniform"
         app:layout_constraintBottom_toTopOf="@+id/item_description_text_view"
         app:layout_constraintEnd_toEndOf="@+id/purchase_screen_text_box_bg"
@@ -104,7 +105,7 @@
         style="@style/DescriptionTextView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="The dog sees your sin.. how could you eat her"
+        android:text="@string/item_desciption_default"
         app:autoSizeTextType="uniform"
         app:layout_constraintBottom_toTopOf="@+id/item_price_text_view"
         app:layout_constraintEnd_toEndOf="@+id/item_title_text_view"
@@ -118,11 +119,12 @@
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:text="amount of money"
+        android:text="@string/item_price_default"
         app:autoSizeTextType="uniform"
         app:layout_constraintBottom_toTopOf="@+id/bottom_horizontal_guideline"
         app:layout_constraintEnd_toEndOf="@+id/purchase_screen_text_box_bg"
-        app:layout_constraintStart_toStartOf="@+id/purchase_screen_text_box_bg" />
+        app:layout_constraintStart_toStartOf="@+id/purchase_screen_text_box_bg"
+        tools:ignore="TextContrastCheck" />
 
     <Button
         android:id="@+id/eat_button"
@@ -136,7 +138,8 @@
         app:layout_constraintBottom_toBottomOf="@+id/purchase_screen_text_box_bg"
         app:layout_constraintEnd_toEndOf="@+id/purchase_screen_text_box_bg"
         app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="@+id/purchase_screen_text_box_bg" />
+        app:layout_constraintStart_toStartOf="@+id/purchase_screen_text_box_bg"
+        tools:ignore="TextContrastCheck" />
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/order_name_input"
@@ -146,7 +149,7 @@
         android:layout_rowWeight="1"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:hint="Name for the order:"
+        android:hint="@string/customer_name_input_hint"
         android:inputType="textCapWords"
         android:minHeight="48dp"
         android:textColorHint="@color/white"
@@ -163,7 +166,8 @@
         android:backgroundTint="@color/salmon"
         android:text="@string/home"
         app:layout_constraintBottom_toTopOf="@+id/purchase_fragment_half_guideline"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="TextContrastCheck" />
 
     <TextView
         android:id="@+id/death_statement_text"
@@ -174,7 +178,7 @@
         android:background="@color/black"
         android:gravity="top|center_vertical"
         android:padding="8dp"
-        android:text="&quot;goodbye, cruel world!&quot;"
+        android:text="@string/death_statement_default"
         app:autoSizeTextType="uniform"
         app:layout_constraintBottom_toBottomOf="@id/other_text_box_bg"
         app:layout_constraintEnd_toEndOf="@id/other_text_box_bg"
@@ -196,7 +200,8 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/other_text_box_bg"
         app:layout_constraintTop_toTopOf="@+id/other_text_box_bg"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="ImageContrastCheck" />
 
     <Button
         android:id="@+id/back_button_purchase_screen"
@@ -206,7 +211,8 @@
         android:backgroundTint="@color/salmon"
         android:text="@string/back"
         app:layout_constraintBottom_toTopOf="@+id/purchase_fragment_half_guideline"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="TextContrastCheck" />
 
     <TextView
         android:id="@+id/barista_name_view"
@@ -217,7 +223,7 @@
         android:layout_marginEnd="8dp"
         android:background="@color/black"
         android:padding="8dp"
-        android:text="Rumble"
+        android:text="@string/barista_name_default"
         app:autoSizeTextType="uniform"
         app:layout_constraintBottom_toTopOf="@+id/purchase_fragment_half_guideline"
         app:layout_constraintEnd_toStartOf="@+id/back_button_purchase_screen"

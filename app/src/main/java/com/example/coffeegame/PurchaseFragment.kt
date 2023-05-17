@@ -1,3 +1,5 @@
+@file:Suppress("DEPRECATION")
+
 package com.example.coffeegame
 
 import android.content.SharedPreferences
@@ -48,7 +50,6 @@ class PurchaseFragment : Fragment() {
             binding.itemTitleTextView.text = it.name
             binding.itemPriceTextView.text = it.price
             binding.itemDescriptionTextView.text = it.description
-            //TODO: use getString(it.deathStatement) when strings are saved properly
             }
         //navigation buttons
         binding.backButtonPurchaseScreen.setOnClickListener{

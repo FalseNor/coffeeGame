@@ -33,149 +33,149 @@ object Datasource {
         Sustenance(
             1,
             R.drawable.food_hotdog,
-            "HotDogDog",
-            "1.0005 dollaroos",
-            "The dog sees your sin.. how could you eat her",
-            "Death is inevitable.. you have simply hastened my end."
+            R.string.hotdogdog_name.toString(),
+            R.string.hotdogdog_price.toString(),
+            R.string.hotdogdog_description.toString(),
+            R.string.hotdogdog_death_statement.toString()
         ),
         Sustenance(
             2,
             R.drawable.food_hotdog,
-            "Overpriced Panini",
-            "30√2 fake dollar",
-        "A sandwich that costs a hopefully nonliteral arm and a leg",
-            "Death is merely a change in form! End, I welcome thee."
+            R.string.overpriced_panini_name.toString(),
+            R.string.overpriced_panini_price.toString(),
+            R.string.overpriced_panini_description.toString(),
+            R.string.overpriced_panini_death_statement.toString()
         ),
         Sustenance(
             3,
             R.drawable.food_to_go_coffee,
-            "normal coffee",
-            ".3 cents",
-        "No additions, a classic choice.",
-            "I'm going to 4D, baby!"
+            R.string.normal_coffee_name.toString(),
+            R.string.normal_coffee_price.toString(),
+            R.string.normal_coffee_description.toString(),
+            R.string.normal_coffee_death_statement.toString()
         ),
         Sustenance(
             4,
             R.drawable.food_hotdog,
-            "Hot or Not Tea",
-            "3.35$",
-            "A lovely option for a dull morning or a scenic night",
-            "I hope I taste alright. It's not like I know, I can't taste myself."
+            R.string.tea_name.toString(),
+            R.string.tea_price.toString(),
+            R.string.tea_description.toString(),
+            R.string.tea_death_statement.toString()
         ),
         Sustenance(
             5,
             R.drawable.food_fidget_burger,
-            "Burger",
-            "7 million",
-            "Yeah it's edible no problem",
-            "I hope you get indigestion."
+            R.string.burger_name.toString(),
+            R.string.burger_price.toString(),
+            R.string.burger_description.toString(),
+            R.string.burger_death_statement.toString()
         ),
         Sustenance(
             6,
             R.drawable.food_spider_donut,
-            "Spider Donut",
-            "2.00$",
-            "Lovely spider donut",
-            "You and I are one taste from absolution."
+            R.string.spider_donut_name.toString(),
+            R.string.spider_donut_price.toString(),
+            R.string.spider_donut_description.toString(),
+            R.string.spider_donut_death_statement.toString()
         ),
         Sustenance(
             7,
             R.drawable.food_coffee_cream,
-            "Cream Cold Brew",
-            "3.00$",
-            "Cold brew with creme",
-            "Ok now we switch I eat you now."
+            R.string.cold_brew_name.toString(),
+            R.string.cold_brew_price.toString(),
+            R.string.cold_brew_description.toString(),
+            R.string.cold_brew_death_statement.toString()
         ),
         Sustenance(
             8,
             R.drawable.food_frosty,
-            "Malkshake",
-            "300$",
-            "It fell off the back of a truck ..you can have it if you want",
-            "You've wasted my soul on a meal."
+            R.string.milkshake_name.toString(),
+            R.string.milkshake_price.toString(),
+            R.string.milkshake_description.toString(),
+            R.string.milkshake_death_statement.toString()
         ),
         Sustenance(
             9,
             R.drawable.food_iced_drink,
-            "Iced Tea",
-            "2$",
-            "We put the tea... on ice",
-            "I am happy to fall to such a foe as yourself. "
+            R.string.iced_tea_name.toString(),
+            R.string.iced_tea_price.toString(),
+            R.string.iced_tea_description.toString(),
+            R.string.iced_tea_death_statement.toString()
         ),
         Sustenance(
             10,
             R.drawable.food_pink_lemonade,
-            "Pink Lemonade",
-            ".667 dogglers",
-            "Pink lemonade to share with your bestest friends :)",
-            "Eat me and we shall be one."
+            R.string.pink_lemonade_name.toString(),
+            R.string.pink_lemonade_price.toString(),
+            R.string.pink_lemonade_description.toString(),
+            R.string.pink_lemonade_death_statement.toString()
         ),
         Sustenance(
             11,
             R.drawable.food_pitcher,
-            "Entire Pitcher of Cold Brew Coffee",
-            "10 doler",
-            "Did you mean to order a whole pitcher?",
-            "Please tell me you're at least sharing me and not chugging an entire pitcher."
+            R.string.pitcher_name.toString(),
+            R.string.pitcher_price.toString(),
+            R.string.pitcher_description.toString(),
+            R.string.pitcher_death_statement.toString()
         )
     )
     private val baristaList: ArrayList<Barista> = arrayListOf(
         Barista(
             0,
-            "Pyotr",
+            R.string.pyotr_name.toString(),
             R.drawable.character_pyotr_storefront,
-            "Lie to Me",
-            "",
+            R.string.pyotr_custom_chat_name.toString(),
+            R.string.pyotr_main_default_greeting.toString(),
             //pyotr advice list
             arrayListOf(
-                "The value of g on Earth is about 9.8 meters per second per second",
+                R.string.pyotr_advice_1.toString(),
                 ""
             ),
             //pyotr chat list
             arrayListOf(
-                "I was once a civil engineer, until I earned enough to follow my passion -now huzzah!",
+                R.string.pyotr_chat_1.toString(),
                 ""
             ),
             //pyotr flirt response list
             arrayListOf(
-                "I like to keep my armor well polished! Thank you for noticing, zaika",
-                "What did you mean by this?"
+                R.string.pyotr_flirt_1.toString(),
+                R.string.pyotr_flirt_2.toString()
             ),
             //pyotr custom response list.. list of lies
             arrayListOf(
-                "2+2=4 :)",
+                R.string.pyotr_custom_1.toString(),
                 ""
             )
         ),
         Barista(
                 1,
-                "Rumble",
+                R.string.rumble_name.toString(),
                 R.drawable.character_rumble_storefront,
-                "Tiger Facts",
-                "Hello! Welcome to the Internet Cafe. How may we serve you today?",
+                R.string.rumble_custom_chat_name.toString(),
+                R.string.rumble_main_default_greeting.toString(),
                 //rumble advice list
                 arrayListOf(
-                    "When the going gets tough, play dead!",
-                    "Don't forget that your health is priority #1. It's harder to do things if you don't take care of yourself",
-                    "It's not a waste of time if you enjoyed wasting it"
+                    R.string.rumble_advice_1.toString(),
+                    R.string.rumble_advice_2.toString(),
+                    R.string.rumble_advice_3.toString()
                 ),
                 //rumble chat list
                 arrayListOf(
-                    "The weather around here is so peculiar, how is it where you are?",
-                    "The weirdest thing happened earlier.. I went outside and the floor suddenly stopped existing."
+                    R.string.rumble_chat_1.toString(),
+                    R.string.rumble_chat_2.toString()
                 ),
                 //rumble flirt response list
                 arrayListOf(
-                    "I'm sorry I don't think I understand what you mean by that",
-                    "Thank you! I find my stripes quite fetching as well"
+                    R.string.rumble_flirt_1.toString(),
+                    R.string.rumble_flirt_2.toString()
                 ),
                 //rumble custom advice list.. tiger facts!
                 arrayListOf(
-                    "Tigers are the most beautiful cats (^･ｪ･^)",
-                    "The strength of the tiger is really impressive (^=˃ᆺ˂)",
-                    "Fossil remains of tigers found in parts of China are believed to be 2 million years old! (,,^・⋏・^,,)",
-                    "(^=˃ᆺ˂) No two tigers have the same stripes!",
-                    "Tigers are the largest of all the Asian big cats ≽ܫ≼"
+                    R.string.rumble_custom_1.toString(),
+                    R.string.rumble_custom_2.toString(),
+                    R.string.rumble_custom_3.toString(),
+                    R.string.rumble_custom_4.toString(),
+                    R.string.rumble_custom_5.toString()
                 )
             )
     )

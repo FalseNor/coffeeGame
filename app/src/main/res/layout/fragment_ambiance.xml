@@ -41,7 +41,7 @@
         app:layout_constraintTop_toBottomOf="@+id/image_ambiance_background" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/text_box_ambiance"
         style="@style/DescriptionTextView"
         android:layout_width="0dp"
         android:layout_height="0dp"

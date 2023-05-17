@@ -10,8 +10,6 @@ import coil.load
 import com.example.coffeegame.data.Datasource
 import com.example.coffeegame.databinding.FragmentChatBinding
 import com.example.coffeegame.model.Barista
-
-// TODO: Rename parameter arguments, choose names that match
 class ChatFragment : Fragment() {
     private lateinit var currentBarista: Barista
     override fun onCreateView(

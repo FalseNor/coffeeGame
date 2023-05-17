@@ -26,6 +26,9 @@ class AmbianceFragment : Fragment() {
         sustenanceViewModel.currentSustenance.observe(this.viewLifecycleOwner){
             binding.foodImageAmbianceScreen.load(it.imageResourceId)
         }
+        binding.textBoxAmbiance.text = getString(R.string.ambient_statement_default)
+
+        //navigation buttons
         binding.ambianceBackToStartButton.setOnClickListener {
             findNavController().navigate(R.id.startFragment)
         }
