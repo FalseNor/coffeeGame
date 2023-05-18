@@ -21,15 +21,22 @@ object Datasource {
     @RequiresApi(Build.VERSION_CODES.O)
     fun getCurrentBarista(): Barista{
         val localTime: LocalTime = getLocalTime()
-        when {
-            localTime.isBefore(LocalTime.parse("09:00")) || localTime == LocalTime.parse("09:00") -> {
-                return baristaList[0]
+        return when {
+            //shift that end at 8:00 (start at 24:00/12:00pm)
+            localTime.isBefore(LocalTime.parse("08:00")) || localTime == LocalTime.parse("08:00") -> {
+                getBaristaData()[1] //TODO: update with nara
             }
-            localTime.isAfter(LocalTime.parse("09:00")) -> {
-                return baristaList[1]
+            //shift that end at 16:00/4:00pm (start at 8:00)
+            localTime.isBefore(LocalTime.parse("16:00")) || localTime == LocalTime.parse("16:00") -> {
+                getBaristaData()[0]
             }
+            //shift that end at 24:00/12:00pm (start at 16:00/4:00pm)
+            localTime.isBefore(LocalTime.parse("24:00")) || localTime == LocalTime.parse("24:00") -> {
+                getBaristaData()[1]
+            }
+
+            else -> getBaristaData()[0]
         }
-        return getBaristaData()[0]
     }
 
     @RequiresApi(Build.VERSION_CODES.O)     //jesus this took several days, the documentation around this area is not great
@@ -135,7 +142,7 @@ object Datasource {
         Barista(
             0,
             R.string.pyotr_name,
-            R.drawable.character_pyotr_storefront,
+            R.drawable.character_pyotr_storefront_morning,
             R.string.pyotr_custom_chat_name,
             R.string.pyotr_main_default_greeting,
             //pyotr advice list
@@ -163,7 +170,7 @@ object Datasource {
         Barista(
                 1,
                 R.string.rumble_name,
-                R.drawable.character_rumble_storefront,
+                R.drawable.character_rumble_storefront_day,
                 R.string.rumble_custom_chat_name,
                 R.string.rumble_main_default_greeting,
                 //rumble advice list

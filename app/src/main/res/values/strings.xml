@@ -38,14 +38,14 @@
     <string name="cold_brew_name">Cream Cold Brew</string>
     <string name="cold_brew_price">3.00$</string>
     <string name="cold_brew_description">Cold brew with creme</string>
-    <string name="cold_brew_death_statement">Ok now we switch I eat you now.</string>
+    <string name="cold_brew_death_statement">OK now we switch I eat you now.</string>
     <string name="milkshake_name">Malkshake</string>
     <string name="milkshake_price">300$</string>
     <string name="milkshake_description">It fell off the back of a truck ..you can have it if you want</string>
     <string name="milkshake_death_statement">You\'ve wasted my soul on a meal.</string>
     <string name="iced_tea_name">Iced Tea</string>
     <string name="iced_tea_price">2$</string>
-    <string name="iced_tea_description">We put the tea... on ice</string>
+    <string name="iced_tea_description">We put the tea… on ice</string>
     <string name="iced_tea_death_statement">"I am happy to fall to such a foe as yourself. "</string>
     <string name="pink_lemonade_name">Pink Lemonade</string>
     <string name="pink_lemonade_price">.667 dogglers</string>

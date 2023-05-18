@@ -40,7 +40,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:scaleType="centerCrop"
-        android:src="@drawable/character_rumble_storefront"
+        android:src="@drawable/character_rumble_storefront_day"
         app:layout_constraintBottom_toTopOf="@+id/purchase_fragment_half_guideline"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"

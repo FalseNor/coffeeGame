@@ -41,7 +41,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:scaleType="centerCrop"
-        android:src="@drawable/counter"
+        android:src="@drawable/character_rumble_storefront_day"
         app:layout_constraintBottom_toBottomOf="@id/ambiance_guideline"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
