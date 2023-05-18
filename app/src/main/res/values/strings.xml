@@ -17,7 +17,7 @@
     <string name="hotdogdog_death_statement">Death is inevitable.. you have simply hastened my end.</string>
     <string name="overpriced_panini_name">Overpriced Panini</string>
     <string name="overpriced_panini_price">30√2 fake dollar</string>
-    <string name="overpriced_panini_description">A sandwich that costs a hopefully nonliteral arm and a leg</string>
+    <string name="overpriced_panini_description">A sandwich that costs a hopefully non-literal arm and a leg… and appears to be made of them.</string>
     <string name="overpriced_panini_death_statement">Death is merely a change in form! End, I welcome thee.</string>
     <string name="normal_coffee_name">Normal Coffee</string>
     <string name="normal_coffee_price">.3 cents</string>
@@ -51,7 +51,7 @@
     <string name="pink_lemonade_price">.667 dogglers</string>
     <string name="pink_lemonade_description">Pink lemonade to share with your bestest friends :)</string>
     <string name="pink_lemonade_death_statement">Eat me and we shall be one.</string>
-    <string name="pitcher_name">Entire Pitcher of Cold Brew Coffee</string>
+    <string name="pitcher_name">Pitcher of Cold Brew</string>
     <string name="pitcher_price">10 doler</string>
     <string name="pitcher_description">Did you mean to order a whole pitcher?</string>
     <string name="pitcher_death_statement">Please tell me you\'re at least sharing me and not chugging an entire pitcher.</string>
@@ -94,4 +94,24 @@
     <string name="pyotr_chat_2">Physics is fun! It\'s just hard to learn for the same reason it is so fun. Everything loops back into itself so beautifully.</string>
     <string name="pyotr_advice_2">Without action, your dreams remain dreams! Take aim, and fire!</string>
     <string name="pyotr_custom_3">TUTTE\'s Theorem: A graph, G = (V, E), has a perfect matching if and only if for every subset U of V, the subgraph G − U has at most |U| odd components (connected components having an odd number of vertices). (|V | + |U| − o(G − U))</string>
+    <string name="punk_lemonade_name">Punk Lemonade</string>
+    <string name="punk_lemonade_price">12 # (sharp dollars)</string>
+    <string name="punk_lemonade_description"><![CDATA[Punk Lemonade to share with your worstest enemies >:(]]></string>
+    <string name="punk_lemonade_death_statement">I don\'t care about death. Eat me if you want.</string>
+    <string name="blackberry_pie_name">Blackberry Hand Pie</string>
+    <string name="blackberry_pie_death_statement">I was already outdated.. I guess it\'s fine if you kill me</string>
+    <string name="blackberry_pie_price">227.00$</string>
+    <string name="blackberry_pie_description">Hand pie made with blackberries. Watch your teeth on the glass.</string>
+    <string name="dodo_bird_death_statement">Are you some sort of Wild Kratts villain?</string>
+    <string name="dodo_bird_description">This is a dodo bird. How did we get this? Why are we selling it? Let\'s ignore that.</string>
+    <string name="dodo_bird_price">The price is probably incalculable</string>
+    <string name="dodo_bird_name">Dodo Bird</string>
+    <string name="house_salad_name">House Salad</string>
+    <string name="house_salad_price">10 Autumn Leaves</string>
+    <string name="house_salad_death_statement">At least this is better than dying by termites</string>
+    <string name="house_salad_description">The house salad. A house made of salad.</string>
+    <string name="hot_goth_tea_name">Hot Goth Tea</string>
+    <string name="hot_goth_tea_price">20 beatcoins</string>
+    <string name="hot_goth_tea_death_statement">Jeez, I\'d say buy a dinner first but I guess you did.</string>
+    <string name="hot_goth_tea_description">This tea is really hot, also mind the spikes on the way down.</string>
 </resources>

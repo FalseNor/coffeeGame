@@ -59,7 +59,7 @@ object Datasource {
         ),
         Sustenance(
             1,
-            R.drawable.food_hotdog,
+            R.drawable.food_footwich,
             R.string.overpriced_panini_name,
             R.string.overpriced_panini_price,
             R.string.overpriced_panini_description,
@@ -72,14 +72,6 @@ object Datasource {
             R.string.normal_coffee_price,
             R.string.normal_coffee_description,
             R.string.normal_coffee_death_statement
-        ),
-        Sustenance(
-            3,
-            R.drawable.food_hotdog,
-            R.string.tea_name,
-            R.string.tea_price,
-            R.string.tea_description,
-            R.string.tea_death_statement
         ),
         Sustenance(
             4,
@@ -136,6 +128,46 @@ object Datasource {
             R.string.pitcher_price,
             R.string.pitcher_description,
             R.string.pitcher_death_statement
+        ),
+        Sustenance(
+            11,
+            R.drawable.food_punk_lemonade,
+            R.string.punk_lemonade_name,
+            R.string.punk_lemonade_price,
+            R.string.punk_lemonade_description,
+            R.string.punk_lemonade_death_statement,
+        ),
+        Sustenance(
+            12,
+            R.drawable.food_blackberry_pie,
+            R.string.blackberry_pie_name,
+            R.string.blackberry_pie_price,
+            R.string.blackberry_pie_description,
+            R.string.blackberry_pie_death_statement
+        ),
+        Sustenance(
+            13,
+            R.drawable.food_dodo_bird,
+            R.string.dodo_bird_name,
+            R.string.dodo_bird_price,
+            R.string.dodo_bird_description,
+            R.string.dodo_bird_death_statement
+        ),
+        Sustenance(
+            14,
+            R.drawable.food_house_salad,
+            R.string.house_salad_name,
+            R.string.house_salad_price,
+            R.string.house_salad_description,
+            R.string.house_salad_death_statement
+        ),
+        Sustenance(
+            15,
+            R.drawable.goth_tea,
+            R.string.hot_goth_tea_name,
+            R.string.hot_goth_tea_price,
+            R.string.hot_goth_tea_description,
+            R.string.hot_goth_tea_death_statement
         )
     )
     private val baristaList: ArrayList<Barista> = arrayListOf(
