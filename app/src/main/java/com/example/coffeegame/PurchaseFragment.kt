@@ -3,12 +3,14 @@
 package com.example.coffeegame
 
 import android.content.SharedPreferences
+import android.os.Build
 import android.os.Bundle
 import android.preference.PreferenceManager
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.annotation.RequiresApi
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.findNavController
@@ -33,23 +35,24 @@ class PurchaseFragment : Fragment() {
 
     }
 
+    @RequiresApi(Build.VERSION_CODES.N)
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val binding = FragmentPurchaseBinding.bind(view)
         currentBarista = Datasource.getCurrentBarista()
         //update view with current barista data
         binding.purchaseScreenCharacterImage.load(currentBarista.imageResourceId)
-        binding.baristaNameView.text = currentBarista.name
+        binding.baristaNameView.setText(currentBarista.name)
 
         //init shared preferences
         sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this.context)
 
         sustenanceViewModel.currentSustenance.observe(this.viewLifecycleOwner) {
             binding.foodImage.load(it.imageResourceId)
-            binding.deathStatementText.text = it.deathStatement
-            binding.itemTitleTextView.text = it.name
-            binding.itemPriceTextView.text = it.price
-            binding.itemDescriptionTextView.text = it.description
+            binding.deathStatementText.setText(it.deathStatement)
+            binding.itemTitleTextView.setText(it.name)
+            binding.itemPriceTextView.setText(it.price)
+            binding.itemDescriptionTextView.setText(it.description)
             }
         //navigation buttons
         binding.backButtonPurchaseScreen.setOnClickListener{

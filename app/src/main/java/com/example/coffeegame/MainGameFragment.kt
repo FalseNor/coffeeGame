@@ -1,9 +1,12 @@
 package com.example.coffeegame
 
+import android.os.Build
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.annotation.RequiresApi
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.findNavController
@@ -23,15 +26,17 @@ class MainGameFragment : Fragment() {
         //bind main game
         return FragmentMainGameBinding.inflate(inflater, container, false).root
     }
+    @RequiresApi(Build.VERSION_CODES.N)
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val binding = FragmentMainGameBinding.bind(view)
+        Log.i("TIME", Datasource.getLocalTime().toString())
 
         currentBarista = Datasource.getCurrentBarista()
         //update view with current barista info
-        binding.nameDisplay.text = currentBarista.name
+        binding.nameDisplay.setText(currentBarista.name)
         binding.characterImage.load(currentBarista.imageResourceId)
-        binding.textBox.text = currentBarista.normalGreetingStatement
+        binding.textBox.setText(currentBarista.normalGreetingStatement)
 
         val adapter = SustenanceAdapter {
             sustenanceViewModel.updateCurrentSustenance(it)

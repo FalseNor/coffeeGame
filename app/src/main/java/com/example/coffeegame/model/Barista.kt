@@ -4,15 +4,15 @@ import androidx.annotation.DrawableRes
 
 data class Barista(
     val id: Int,
-    val name: String,
+    val name: Int,
     @DrawableRes val imageResourceId: Int,
     //name of custom chat in chat fragment
-    val customChatName: String,
-    val normalGreetingStatement: String,
+    val customChatName: Int,
+    val normalGreetingStatement: Int,
 
     //used in chat fragment
-    val adviceList: ArrayList<String>,
-    val chatList: ArrayList<String>,
-    val flirtList: ArrayList<String>,
-    val customList: ArrayList<String>,
+    val adviceList: ArrayList<Int>,
+    val chatList: ArrayList<Int>,
+    val flirtList: ArrayList<Int>,
+    val customList: ArrayList<Int>,
     )

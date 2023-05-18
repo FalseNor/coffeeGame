@@ -19,8 +19,8 @@ class SustenanceAdapter(private val onItemClicked: (Sustenance) -> Unit) :
         RecyclerView.ViewHolder(binding.root) {
 
         fun bind(sustenance: Sustenance, context: Context) { //context.getString(sustenance.name) but we're not using string resources yet
-            binding.sustenanceName.text = sustenance.name
-            binding.sustenancePrice.text = sustenance.price
+            binding.sustenanceName.setText(sustenance.name)
+            binding.sustenancePrice.setText(sustenance.price)
             // Load the images into the ImageView using the Coil library
             binding.sustenanceImage.load(sustenance.imageResourceId)
         }

@@ -9,7 +9,7 @@
     <string name="back">Back</string>
     <string name="home">Home</string>
     <string name="eat">Eat</string>
-    <string name="ambient_statement_default">You eat? the ${sustenanceViewModel.currentSustenance} in the Cafe.. a calmness washes over you despite or perhaps because of the odd surroundings.</string>
+    <string name="ambient_statement_default">You eat? the food? in the Cafe.. a calmness washes over you despite or perhaps because of the odd surroundings.</string>
     <string name="default_chat_greeting">What did you want to talk about?</string>
     <string name="hotdogdog_name">HotDogDog</string>
     <string name="hotdogdog_price">1.0005 dollaroos</string>
@@ -90,4 +90,8 @@
     <string name="flirt">Flirt</string>
     <string name="custom_conversation_button">custom_conversation_button</string>
     <string name="chat_screen_barista_name_display">chat_screen_barista_name_display</string>
+    <string name="pyotr_custom_2">KONIG’S THEOREM. The maximum number v(G) of independent edges of a bipartite graph equals to the minimum number r(G) of points covering all edges</string>
+    <string name="pyotr_chat_2">pyotr_chat_2</string>
+    <string name="pyotr_advice_2">pyotr_advice_2</string>
+    <string name="pyotr_custom_3">TUTTE\'s Theorem: A graph, G = (V, E), has a perfect matching if and only if for every subset U of V, the subgraph G − U has at most |U| odd components (connected components having an odd number of vertices). (|V | + |U| − o(G − U))</string>
 </resources>
