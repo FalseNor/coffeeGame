@@ -114,4 +114,8 @@
     <string name="hot_goth_tea_price">20 beatcoins</string>
     <string name="hot_goth_tea_death_statement">Jeez, I\'d say buy a dinner first but I guess you did.</string>
     <string name="hot_goth_tea_description">This tea is really hot, also mind the spikes on the way down.</string>
+    <string name="tea_ice_name">Tea Ice?</string>
+    <string name="tea_ice_description">Iced tea, or tea inside an ice cube. You have to melt it to get to the tea.</string>
+    <string name="tea_ice_price">4 dillards</string>
+    <string name="tea_ice_death_statement">Goodbye, cruel world!</string>
 </resources>

@@ -168,6 +168,14 @@ object Datasource {
             R.string.hot_goth_tea_price,
             R.string.hot_goth_tea_description,
             R.string.hot_goth_tea_death_statement
+        ),
+        Sustenance(
+            16,
+            R.drawable.food_tea_ice,
+            R.string.tea_ice_name,
+            R.string.tea_ice_price,
+            R.string.tea_ice_description,
+            R.string.tea_ice_death_statement
         )
     )
     private val baristaList: ArrayList<Barista> = arrayListOf(
