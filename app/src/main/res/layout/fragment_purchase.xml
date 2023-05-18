@@ -33,7 +33,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent=".85" />
+        app:layout_constraintGuide_percent=".88" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/hated_bottomest_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".94" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/under_title_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".73" />
 
     <ImageView
         android:id="@+id/purchase_screen_character_image"
@@ -74,6 +88,7 @@
         android:layout_marginStart="4dp"
         android:layout_marginTop="4dp"
         android:layout_marginEnd="4dp"
+        android:importantForAccessibility="no"
         android:scaleType="centerCrop"
         android:src="@drawable/better_text_box"
         app:layout_constraintBottom_toTopOf="@+id/purchase_fragment_under_half_guideline"
@@ -82,8 +97,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/purchase_fragment_half_guideline"
         app:layout_constraintVertical_bias="0.0"
-        app:tint="@color/teal_700"
-        android:importantForAccessibility="no" />
+        app:tint="@color/teal_700" />
 
     <TextView
         android:id="@+id/item_title_text_view"
@@ -95,7 +109,7 @@
         android:layout_marginEnd="8dp"
         android:text="@string/item_name_default"
         app:autoSizeTextType="uniform"
-        app:layout_constraintBottom_toTopOf="@+id/item_description_text_view"
+        app:layout_constraintBottom_toTopOf="@+id/under_title_guideline"
         app:layout_constraintEnd_toEndOf="@+id/purchase_screen_text_box_bg"
         app:layout_constraintStart_toStartOf="@+id/purchase_screen_text_box_bg"
         app:layout_constraintTop_toTopOf="@+id/purchase_screen_text_box_bg" />
@@ -107,9 +121,10 @@
         android:layout_height="wrap_content"
         android:text="@string/item_desciption_default"
         app:autoSizeTextType="uniform"
-        app:layout_constraintBottom_toTopOf="@+id/item_price_text_view"
         app:layout_constraintEnd_toEndOf="@+id/item_title_text_view"
-        app:layout_constraintStart_toStartOf="@+id/item_title_text_view" />
+        app:layout_constraintStart_toStartOf="@+id/item_title_text_view"
+        app:layout_constraintTop_toTopOf="@+id/under_title_guideline"
+        tools:ignore="TextContrastCheck" />
 
     <TextView
         android:id="@+id/item_price_text_view"
@@ -118,28 +133,29 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
         android:text="@string/item_price_default"
         app:autoSizeTextType="uniform"
-        app:layout_constraintBottom_toTopOf="@+id/bottom_horizontal_guideline"
         app:layout_constraintEnd_toEndOf="@+id/purchase_screen_text_box_bg"
         app:layout_constraintStart_toStartOf="@+id/purchase_screen_text_box_bg"
+        app:layout_constraintTop_toBottomOf="@+id/item_description_text_view"
         tools:ignore="TextContrastCheck" />
 
     <Button
         android:id="@+id/eat_button"
         style="@style/DescriptionTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:backgroundTint="@color/salmon"
+        android:maxWidth="320dp"
+        android:minHeight="48dp"
         android:text="@string/eat"
         app:layout_constraintBottom_toBottomOf="@+id/purchase_screen_text_box_bg"
         app:layout_constraintEnd_toEndOf="@+id/purchase_screen_text_box_bg"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="@+id/purchase_screen_text_box_bg"
-        tools:ignore="TextContrastCheck" />
+        app:layout_constraintTop_toTopOf="@+id/hated_bottomest_guideline"
+        tools:ignore="TextContrastCheck,VisualLintButtonSize" />
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/order_name_input"
@@ -153,7 +169,7 @@
         android:inputType="textCapWords"
         android:minHeight="48dp"
         android:textColorHint="@color/white"
-        app:layout_constraintBottom_toTopOf="@+id/eat_button"
+        app:layout_constraintBottom_toTopOf="@+id/hated_bottomest_guideline"
         app:layout_constraintEnd_toEndOf="@+id/purchase_screen_text_box_bg"
         app:layout_constraintStart_toStartOf="@+id/purchase_screen_text_box_bg"
         app:layout_constraintTop_toTopOf="@+id/bottom_horizontal_guideline" />

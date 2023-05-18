@@ -91,7 +91,7 @@
     <string name="custom_conversation_button">custom_conversation_button</string>
     <string name="chat_screen_barista_name_display">chat_screen_barista_name_display</string>
     <string name="pyotr_custom_2">KONIG’S THEOREM. The maximum number v(G) of independent edges of a bipartite graph equals to the minimum number r(G) of points covering all edges</string>
-    <string name="pyotr_chat_2">pyotr_chat_2</string>
-    <string name="pyotr_advice_2">pyotr_advice_2</string>
+    <string name="pyotr_chat_2">Physics is fun! It\'s just hard to learn for the same reason it is so fun. Everything loops back into itself so beautifully.</string>
+    <string name="pyotr_advice_2">Without action, your dreams remain dreams! Take aim, and fire!</string>
     <string name="pyotr_custom_3">TUTTE\'s Theorem: A graph, G = (V, E), has a perfect matching if and only if for every subset U of V, the subgraph G − U has at most |U| odd components (connected components having an odd number of vertices). (|V | + |U| − o(G − U))</string>
 </resources>
