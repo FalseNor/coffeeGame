@@ -12,7 +12,9 @@
         tools:layout="@layout/fragment_start" >
         <action
             android:id="@+id/action_startFragment_to_mainGameFragment"
-            app:destination="@id/mainGameFragment" />
+            app:destination="@id/mainGameFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
     </fragment>
     <fragment
         android:id="@+id/mainGameFragment"
@@ -21,13 +23,20 @@
         tools:layout="@layout/fragment_main_game" >
         <action
             android:id="@+id/action_mainGameFragment_to_startFragment"
-            app:destination="@id/startFragment" />
+            app:destination="@id/startFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popUpTo="@id/startFragment" />
         <action
             android:id="@+id/action_mainGameFragment_to_chatFragment"
-            app:destination="@id/chatFragment" />
+            app:destination="@id/chatFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
         <action
             android:id="@+id/action_mainGameFragment_to_purchaseFragment"
-            app:destination="@id/purchaseFragment" />
+            app:destination="@id/purchaseFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
     </fragment>
     <fragment
         android:id="@+id/ambianceFragment"
@@ -36,10 +45,16 @@
         tools:layout="@layout/fragment_ambiance" >
         <action
             android:id="@+id/action_ambianceFragment_to_mainGameFragment"
-            app:destination="@id/mainGameFragment" />
+            app:destination="@id/mainGameFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popUpTo="@id/mainGameFragment" />
         <action
             android:id="@+id/action_ambianceFragment_to_startFragment"
-            app:destination="@id/startFragment" />
+            app:destination="@id/startFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popUpTo="@id/startFragment" />
     </fragment>
     <fragment
         android:id="@+id/chatFragment"
@@ -48,7 +63,14 @@
         tools:layout="@layout/fragment_chat" >
         <action
             android:id="@+id/action_chatFragment_to_startFragment"
-            app:destination="@id/startFragment" />
+            app:destination="@id/startFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popUpTo="@id/startFragment" />
+        <action
+            android:id="@+id/action_chatFragment_to_mainGameFragment"
+            app:destination="@id/mainGameFragment"
+            app:popUpTo="@id/mainGameFragment" />
     </fragment>
     <fragment
         android:id="@+id/purchaseFragment"
@@ -57,6 +79,8 @@
         tools:layout="@layout/fragment_purchase" >
         <action
             android:id="@+id/action_purchaseFragment_to_ambianceFragment"
-            app:destination="@id/ambianceFragment" />
+            app:destination="@id/ambianceFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
     </fragment>
 </navigation>

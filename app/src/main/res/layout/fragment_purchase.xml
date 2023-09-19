@@ -29,6 +29,20 @@
         app:layout_constraintGuide_percent=".3" />
 
     <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/under_title_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".73" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_between_description_and_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".85" />
+
+    <androidx.constraintlayout.widget.Guideline
         android:id="@+id/bottom_horizontal_guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -40,14 +54,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent=".94" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/under_title_guideline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent=".73" />
+        app:layout_constraintGuide_percent="0.93" />
 
     <ImageView
         android:id="@+id/purchase_screen_character_image"
@@ -76,7 +83,7 @@
         android:src="@drawable/better_text_box"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/purchase_fragment_under_half_guideline"
         app:layout_constraintVertical_bias="1.0" />
@@ -118,9 +125,10 @@
         android:id="@+id/item_description_text_view"
         style="@style/DescriptionTextView"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:text="@string/item_desciption_default"
         app:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_between_description_and_price"
         app:layout_constraintEnd_toEndOf="@+id/item_title_text_view"
         app:layout_constraintStart_toStartOf="@+id/item_title_text_view"
         app:layout_constraintTop_toTopOf="@+id/under_title_guideline"
@@ -130,14 +138,15 @@
         android:id="@+id/item_price_text_view"
         style="@style/DescriptionTextView"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:text="@string/item_price_default"
         app:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_horizontal_guideline"
         app:layout_constraintEnd_toEndOf="@+id/purchase_screen_text_box_bg"
         app:layout_constraintStart_toStartOf="@+id/purchase_screen_text_box_bg"
-        app:layout_constraintTop_toBottomOf="@+id/item_description_text_view"
+        app:layout_constraintTop_toTopOf="@+id/guideline_between_description_and_price"
         tools:ignore="TextContrastCheck" />
 
     <Button
@@ -148,11 +157,12 @@
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:backgroundTint="@color/salmon"
-        android:maxWidth="320dp"
-        android:minHeight="48dp"
+        android:maxWidth="320sp"
         android:text="@string/eat"
+        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="@+id/purchase_screen_text_box_bg"
         app:layout_constraintEnd_toEndOf="@+id/purchase_screen_text_box_bg"
+        app:layout_constraintHeight_min="wrap"
         app:layout_constraintStart_toStartOf="@+id/purchase_screen_text_box_bg"
         app:layout_constraintTop_toTopOf="@+id/hated_bottomest_guideline"
         tools:ignore="TextContrastCheck,VisualLintButtonSize" />
@@ -192,7 +202,6 @@
         android:layout_height="0dp"
         android:layout_margin="8dp"
         android:background="@color/black"
-        android:gravity="top|center_vertical"
         android:padding="8dp"
         android:text="@string/death_statement_default"
         app:autoSizeTextType="uniform"

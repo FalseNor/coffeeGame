@@ -15,10 +15,11 @@ class SustenanceAdapter(private val onItemClicked: (Sustenance) -> Unit) :
 
     private lateinit var context: Context
 
-    class SustenanceViewHolder(private var binding: HorizontalListItemBinding) :
-        RecyclerView.ViewHolder(binding.root) {
+    class SustenanceViewHolder(
+        private var binding: HorizontalListItemBinding
+        ) : RecyclerView.ViewHolder(binding.root) {
 
-        fun bind(sustenance: Sustenance, context: Context) { //context.getString(sustenance.name) but we're not using string resources yet
+        fun bind(sustenance: Sustenance, context: Context) {
             binding.sustenanceName.setText(sustenance.name)
             binding.sustenancePrice.setText(sustenance.price)
             // Load the images into the ImageView using the Coil library

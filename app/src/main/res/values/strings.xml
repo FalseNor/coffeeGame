@@ -99,12 +99,12 @@
     <string name="punk_lemonade_description"><![CDATA[Punk Lemonade to share with your worstest enemies >:(]]></string>
     <string name="punk_lemonade_death_statement">I don\'t care about death. Eat me if you want.</string>
     <string name="blackberry_pie_name">Blackberry Hand Pie</string>
-    <string name="blackberry_pie_death_statement">I was already outdated.. I guess it\'s fine if you kill me</string>
+    <string name="blackberry_pie_death_statement">I was already outdated.. I guess it\'s fine to die</string>
     <string name="blackberry_pie_price">227.00$</string>
     <string name="blackberry_pie_description">Hand pie made with blackberries. Watch your teeth on the glass.</string>
     <string name="dodo_bird_death_statement">Are you some sort of Wild Kratts villain?</string>
-    <string name="dodo_bird_description">This is a dodo bird. How did we get this? Why are we selling it? Let\'s ignore that.</string>
-    <string name="dodo_bird_price">The price is probably incalculable</string>
+    <string name="dodo_bird_description">This is a dodo bird. How did we get this? Why are we selling it?</string>
+    <string name="dodo_bird_price">The price is incalculable</string>
     <string name="dodo_bird_name">Dodo Bird</string>
     <string name="house_salad_name">House Salad</string>
     <string name="house_salad_price">10 Autumn Leaves</string>
@@ -113,9 +113,19 @@
     <string name="hot_goth_tea_name">Hot Goth Tea</string>
     <string name="hot_goth_tea_price">20 beatcoins</string>
     <string name="hot_goth_tea_death_statement">Jeez, I\'d say buy a dinner first but I guess you did.</string>
-    <string name="hot_goth_tea_description">This tea is really hot, also mind the spikes on the way down.</string>
+    <string name="hot_goth_tea_description">This tea is super hot! Mind the spikes on the way down.</string>
     <string name="tea_ice_name">Tea Ice?</string>
     <string name="tea_ice_description">Iced tea, or tea inside an ice cube. You have to melt it to get to the tea.</string>
     <string name="tea_ice_price">4 dillards</string>
     <string name="tea_ice_death_statement">Goodbye, cruel world!</string>
+    <string name="zebra_ice_cream_sandwich_name">Zebra Ice Cream</string>
+    <string name="zebra_ice_cream_sandwich_death_statement">My death is a welcome sacrifice for a meal as good as I will make.</string>
+    <string name="zebra_ice_cream_sandwich_price">3€</string>
+    <string name="zebra_ice_cream_sandwich_description">Zebra ice cream sandwich, with real zebra!</string>
+    <string name="nara_name">Nara</string>
+    <string name="nara_default_greeting">Good day, what would you like?</string>
+    <string name="nara_custom_chat_name">Affirmations</string>
+    <string name="lidoo_custom_chat_name">Rumors</string>
+    <string name="lidoo_name">Lidoo</string>
+    <string name="lidoo_greeting">Hiya! What would you like to order?</string>
 </resources>

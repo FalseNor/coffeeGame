@@ -7,6 +7,7 @@ import com.example.coffeegame.model.Barista
 import com.example.coffeegame.model.Sustenance
 import java.time.LocalTime
 import java.time.format.DateTimeFormatter
+import java.util.Random
 
 
 object Datasource {
@@ -14,6 +15,15 @@ object Datasource {
     //data handling functions
     fun getSustenanceData(): ArrayList<Sustenance>{
         return sustenanceList
+        //I don't formally use this one much but it's still probably useful to have idk
+    }
+    fun getLimitedSustenanceData(): ArrayList<Sustenance> {
+        //beware anybody lookin' at this it took a very long time to figure out this part
+        //divides the amount of available food that goes into the visible recyclerview
+        var sustenanceCopy: ArrayList<Sustenance> = getSustenanceData().map { it.copy() } as ArrayList<Sustenance>
+        val seed = Random()
+        sustenanceCopy= sustenanceCopy.shuffled(seed) as ArrayList<Sustenance>
+        return sustenanceCopy as ArrayList<Sustenance>
     }
     private fun getBaristaData(): ArrayList<Barista>{
         return baristaList
@@ -21,26 +31,34 @@ object Datasource {
     @RequiresApi(Build.VERSION_CODES.O)
     fun getCurrentBarista(): Barista{
         val localTime: LocalTime = getLocalTime()
+        //It gets mad with midnight so I just did the ol' canvas trick, 23:59
         return when {
-            //shift that end at 8:00 (start at 24:00/12:00pm)
-            localTime.isBefore(LocalTime.parse("08:00")) || localTime == LocalTime.parse("08:00") -> {
-                getBaristaData()[1] //TODO: update with nara
+            //shift that ends at 6:00am (starts at 24:00/12:00pm/00:00 //Just the start of the day)
+            // practically the night shift
+            localTime.isBefore(LocalTime.parse("06:00")) || localTime == LocalTime.parse("06:00") -> {
+                getBaristaData()[1]
+            //TODO: update with lidoo when lidoo implemented
             }
-            //shift that end at 16:00/4:00pm (start at 8:00)
-            localTime.isBefore(LocalTime.parse("16:00")) || localTime == LocalTime.parse("16:00") -> {
+            //shift that ends at 12:00am/12:00 (starts at 6:00am)
+            localTime.isBefore(LocalTime.parse("12:00")) || localTime == LocalTime.parse("12:00") -> {
                 getBaristaData()[0]
             }
-            //shift that end at 24:00/12:00pm (start at 16:00/4:00pm)
-            localTime.isBefore(LocalTime.parse("24:00")) || localTime == LocalTime.parse("24:00") -> {
+            //shift that ends at 6:00 pm/18:00 (starts at 12:00am/12:00)
+            localTime.isBefore(LocalTime.parse("18:00")) || localTime == LocalTime.parse("18:00") -> {
                 getBaristaData()[1]
             }
-
-            else -> getBaristaData()[0]
+            //shift that ends at midnight/24:00/00:00/end of day (starts at 6:00pm/18:00)
+            localTime.isBefore(LocalTime.parse("23:59")) || localTime == LocalTime.parse("23:59") -> {
+                getBaristaData()[0]
+                //TODO: update with nara? when nara implemented
+            }
+            //hanging else in case anything goes wrong
+            else -> getBaristaData()[1]
         }
     }
 
     @RequiresApi(Build.VERSION_CODES.O)     //jesus this took several days, the documentation around this area is not great
-    fun getLocalTime(): LocalTime {         //I <3 Java :3
+    fun getLocalTime(): LocalTime {         //I <3 Java
         val nowTime= LocalTime.now()        //important to note that localtime  doesn't know anything about the date
         val formatter = DateTimeFormatter.ofPattern("HH:mm")    //foul
         val timeTxt = nowTime.format(formatter)
@@ -74,7 +92,7 @@ object Datasource {
             R.string.normal_coffee_death_statement
         ),
         Sustenance(
-            4,
+            3,
             R.drawable.food_fidget_burger,
             R.string.burger_name,
             R.string.burger_price,
@@ -82,7 +100,7 @@ object Datasource {
             R.string.burger_death_statement
         ),
         Sustenance(
-            5,
+            4,
             R.drawable.food_spider_donut,
             R.string.spider_donut_name,
             R.string.spider_donut_price,
@@ -90,7 +108,7 @@ object Datasource {
             R.string.spider_donut_death_statement
         ),
         Sustenance(
-            6,
+            5,
             R.drawable.food_coffee_cream,
             R.string.cold_brew_name,
             R.string.cold_brew_price,
@@ -98,7 +116,7 @@ object Datasource {
             R.string.cold_brew_death_statement
         ),
         Sustenance(
-            7,
+            6,
             R.drawable.food_frosty,
             R.string.milkshake_name,
             R.string.milkshake_price,
@@ -106,7 +124,7 @@ object Datasource {
             R.string.milkshake_death_statement
         ),
         Sustenance(
-            8,
+            7,
             R.drawable.food_iced_drink,
             R.string.iced_tea_name,
             R.string.iced_tea_price,
@@ -114,7 +132,7 @@ object Datasource {
             R.string.iced_tea_death_statement
         ),
         Sustenance(
-            9,
+            8,
             R.drawable.food_pink_lemonade,
             R.string.pink_lemonade_name,
             R.string.pink_lemonade_price,
@@ -122,7 +140,7 @@ object Datasource {
             R.string.pink_lemonade_death_statement
         ),
         Sustenance(
-            10,
+            9,
             R.drawable.food_pitcher,
             R.string.pitcher_name,
             R.string.pitcher_price,
@@ -130,7 +148,7 @@ object Datasource {
             R.string.pitcher_death_statement
         ),
         Sustenance(
-            11,
+            10,
             R.drawable.food_punk_lemonade,
             R.string.punk_lemonade_name,
             R.string.punk_lemonade_price,
@@ -138,7 +156,7 @@ object Datasource {
             R.string.punk_lemonade_death_statement,
         ),
         Sustenance(
-            12,
+            11,
             R.drawable.food_blackberry_pie,
             R.string.blackberry_pie_name,
             R.string.blackberry_pie_price,
@@ -146,7 +164,7 @@ object Datasource {
             R.string.blackberry_pie_death_statement
         ),
         Sustenance(
-            13,
+            12,
             R.drawable.food_dodo_bird,
             R.string.dodo_bird_name,
             R.string.dodo_bird_price,
@@ -154,7 +172,7 @@ object Datasource {
             R.string.dodo_bird_death_statement
         ),
         Sustenance(
-            14,
+            13,
             R.drawable.food_house_salad,
             R.string.house_salad_name,
             R.string.house_salad_price,
@@ -162,7 +180,7 @@ object Datasource {
             R.string.house_salad_death_statement
         ),
         Sustenance(
-            15,
+            14,
             R.drawable.goth_tea,
             R.string.hot_goth_tea_name,
             R.string.hot_goth_tea_price,
@@ -170,12 +188,20 @@ object Datasource {
             R.string.hot_goth_tea_death_statement
         ),
         Sustenance(
-            16,
+            15,
             R.drawable.food_tea_ice,
             R.string.tea_ice_name,
             R.string.tea_ice_price,
             R.string.tea_ice_description,
             R.string.tea_ice_death_statement
+        ),
+        Sustenance(
+            16,
+            R.drawable.food_zebra_ice_cream_sandwich,
+            R.string.zebra_ice_cream_sandwich_name,
+            R.string.zebra_ice_cream_sandwich_price,
+            R.string.zebra_ice_cream_sandwich_description,
+            R.string.zebra_ice_cream_sandwich_death_statement
         )
     )
     private val baristaList: ArrayList<Barista> = arrayListOf(
@@ -186,6 +212,7 @@ object Datasource {
             R.string.pyotr_custom_chat_name,
             R.string.pyotr_main_default_greeting,
             //pyotr advice list
+            //TODO: implement pyotr chats
             arrayListOf(
                 R.string.pyotr_advice_1,
                 R.string.pyotr_advice_2
@@ -237,6 +264,61 @@ object Datasource {
                     R.string.rumble_custom_4,
                     R.string.rumble_custom_5
                 )
+            ),
+        Barista(
+            2,
+            R.string.nara_name,
+            R.drawable.character_nara_storefront_evening,
+            R.string.nara_custom_chat_name,
+            R.string.nara_default_greeting,
+            //TODO: implement nara chats
+            //nara advice list
+            arrayListOf(
+                1,
+                2
+            ),
+            //nara chat list
+            arrayListOf(
+                1,
+                2
+            ),
+            //nara flirt response list
+            arrayListOf(
+                1,
+                2
+            ),
+            //nara custom advice list... affirmations!
+            arrayListOf(
+                1,
+                2
             )
+        ),
+        Barista(
+            3,
+            R.string.lidoo_name,
+            R.drawable.character_lidoo_storefront_night,
+            R.string.lidoo_custom_chat_name,
+            R.string.lidoo_greeting,
+            //lidoo advice list
+            arrayListOf(
+                1,
+                2
+            ),
+            //lidoo chat list
+            arrayListOf(
+                1,
+                2
+            ),
+            //lidoo flirt response list
+            arrayListOf(
+                1,
+                2
+            ),
+            //lidoo custom list.. wild rumors!
+            arrayListOf(
+                1,
+                2
+            ),
+        )
     )
 }
