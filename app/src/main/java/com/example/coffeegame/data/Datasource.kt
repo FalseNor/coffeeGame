@@ -41,23 +41,26 @@ object Datasource {
             // practically the night shift
             localTime.isBefore(LocalTime.parse("06:00")) || localTime == LocalTime.parse("06:00") -> {
                 getBaristaData()[3]
-            //TODO: update with lidoo when lidoo implemented
+                //lidoo
             }
             //shift that ends at 12:00am/12:00 (starts at 6:00am)
             localTime.isBefore(LocalTime.parse("12:00")) || localTime == LocalTime.parse("12:00") -> {
                 getBaristaData()[0]
+                //pyotr
             }
             //shift that ends at 6:00 pm/18:00 (starts at 12:00am/12:00)
             localTime.isBefore(LocalTime.parse("18:00")) || localTime == LocalTime.parse("18:00") -> {
                 getBaristaData()[1]
+                //rumble
             }
             //shift that ends at midnight/24:00/00:00/end of day (starts at 6:00pm/18:00)
             localTime.isBefore(LocalTime.parse("23:59")) || localTime == LocalTime.parse("23:59") -> {
                 getBaristaData()[2]
-                //TODO: update with nara? when nara implemented
+                //nara
             }
             //hanging else in case anything goes wrong
-            else -> getBaristaData()[1]
+            else -> getBaristaData().random()
+            //picks random barista
         }
     }
 
