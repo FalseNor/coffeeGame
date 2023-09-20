@@ -13,15 +13,19 @@ import java.util.Random
 object Datasource {
 
     //data handling functions
-    fun getSustenanceData(): ArrayList<Sustenance>{
+    private fun getSustenanceData(): ArrayList<Sustenance>{
         return sustenanceList
         //I don't formally use this one much but it's still probably useful to have idk
     }
     fun getLimitedSustenanceData(): ArrayList<Sustenance> {
         //beware anybody lookin' at this it took a very long time to figure out this part
-        //divides the amount of available food that goes into the visible recyclerview
+        //makes a copy of the lists of foods so we can mess with it
         var sustenanceCopy: ArrayList<Sustenance> = getSustenanceData().map { it.copy() } as ArrayList<Sustenance>
+        //creates a random seed
         val seed = Random()
+        //does a fisher-yates shuffle to the list of foods, using the random seed, which I think is for mutable lists
+        // so I cast it to an arraylist
+        //TODO: figure out how to sublist this part
         sustenanceCopy= sustenanceCopy.shuffled(seed) as ArrayList<Sustenance>
         return sustenanceCopy as ArrayList<Sustenance>
     }
@@ -36,7 +40,7 @@ object Datasource {
             //shift that ends at 6:00am (starts at 24:00/12:00pm/00:00 //Just the start of the day)
             // practically the night shift
             localTime.isBefore(LocalTime.parse("06:00")) || localTime == LocalTime.parse("06:00") -> {
-                getBaristaData()[1]
+                getBaristaData()[3]
             //TODO: update with lidoo when lidoo implemented
             }
             //shift that ends at 12:00am/12:00 (starts at 6:00am)
@@ -49,7 +53,7 @@ object Datasource {
             }
             //shift that ends at midnight/24:00/00:00/end of day (starts at 6:00pm/18:00)
             localTime.isBefore(LocalTime.parse("23:59")) || localTime == LocalTime.parse("23:59") -> {
-                getBaristaData()[0]
+                getBaristaData()[2]
                 //TODO: update with nara? when nara implemented
             }
             //hanging else in case anything goes wrong
@@ -212,7 +216,6 @@ object Datasource {
             R.string.pyotr_custom_chat_name,
             R.string.pyotr_main_default_greeting,
             //pyotr advice list
-            //TODO: implement pyotr chats
             arrayListOf(
                 R.string.pyotr_advice_1,
                 R.string.pyotr_advice_2
@@ -271,26 +274,30 @@ object Datasource {
             R.drawable.character_nara_storefront_evening,
             R.string.nara_custom_chat_name,
             R.string.nara_default_greeting,
-            //TODO: implement nara chats
             //nara advice list
             arrayListOf(
-                1,
-                2
+                R.string.nara_advice_1,
+                R.string.nara_advice_2
             ),
             //nara chat list
             arrayListOf(
-                1,
-                2
+                R.string.nara_chat_1,
+                R.string.nara_chat_2
             ),
             //nara flirt response list
             arrayListOf(
-                1,
-                2
+                R.string.nara_flirt_1,
+                R.string.nara_flirt_2
             ),
             //nara custom advice list... affirmations!
             arrayListOf(
-                1,
-                2
+                R.string.nara_custom_1,
+                R.string.nara_custom_2,
+                R.string.nara_custom_3,
+                R.string.nara_custom_4,
+                R.string.nara_custom_5,
+                R.string.nara_custom_6,
+                R.string.nara_custom_7,
             )
         ),
         Barista(
@@ -301,23 +308,23 @@ object Datasource {
             R.string.lidoo_greeting,
             //lidoo advice list
             arrayListOf(
-                1,
-                2
+                R.string.lidoo_advice_1,
+                R.string.lidoo_advice_2
             ),
             //lidoo chat list
             arrayListOf(
-                1,
-                2
+                R.string.lidoo_chat_1,
+                R.string.lidoo_chat_2
             ),
             //lidoo flirt response list
             arrayListOf(
-                1,
-                2
+                R.string.lidoo_flirt_1,
+                R.string.lidoo_flirt_2
             ),
-            //lidoo custom list.. wild rumors!
+            //lidoo custom list.. opinions on menu items
             arrayListOf(
-                1,
-                2
+                R.string.lidoo_custom_chat_1,
+                R.string.lidoo_custom_chat_2
             ),
         )
     )
